@@ -4,9 +4,9 @@ An easy-to-use CLI tool for updating multiple local repos at once.
 
 ---
 
-<img src="./public/Pulley-Success.PNG)" width="600" height="500"/>
+<img src="./public/Pulley-Success.PNG" width="700" height="400"/>
 
-<img src="./public/Pulley-Prompt.PNG" width="600" height="500" style="display: block; margin: 0 auto"/>
+<img src="./public/Pulley-Prompt.PNG" width="700" height="400" style="display: block; margin: 0 auto"/>
 
 ---
 
