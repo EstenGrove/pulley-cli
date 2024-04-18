@@ -38,6 +38,7 @@ An easy-to-use CLI tool for updating multiple local repos at once.
 }
 ```
 
-6. Now you can run `pulley` command from any directory anywhere on your machine!
+6. Now install it globally: `npm i -g .`
+7. Now you can run `pulley` command from any directory anywhere on your machine!
 
 ---
