@@ -2,8 +2,11 @@
 	"name": "pulley",
 	"version": "0.1.0",
 	"description": "",
-	"main": "app.js",
+	"main": "bin/index.js",
 	"type": "module",
+	"bin": {
+		"pulley": "./bin/index.js"
+	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
