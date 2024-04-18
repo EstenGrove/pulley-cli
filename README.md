@@ -4,9 +4,9 @@ An easy-to-use CLI tool for updating multiple local repos at once.
 
 ---
 
-![Pulley CLI - Get Pull All](./public/Pulley-Success.PNG)
+<img src="./public/Pulley-Success.PNG)" width="600" height="500"/>
 
-<img src="./public/Pulley-Prompt.PNG" width="500" height="300">
+<img src="./public/Pulley-Prompt.PNG" width="600" height="500" style="display: block; margin: 0 auto"/>
 
 ---
 
