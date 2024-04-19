@@ -5,6 +5,8 @@ import chalk from "chalk";
 import path from "node:path";
 import { execSync } from "child_process";
 import { chdir, cwd } from "node:process";
+import { execGitCommand, commands } from "./utils/utils.js";
+
 const { prompt, Separator, Select } = enquirer;
 
 const log = console.log;
@@ -21,6 +23,8 @@ const config = {
 };
 
 /**
+ * "Pulley Config"
+ *
  * ## ATTENTION ##
  * - Replace the following file paths with the paths to each repo on your machine
  * Please following the file path guidelines below!
@@ -70,20 +74,6 @@ const choices = [
 	},
 ];
 
-const commands = {
-	getBranch: "git rev-parse --abbrev-ref HEAD", // gets branch name
-	getCommit: "git rev-parse HEAD", // gets last commit to HEAD
-	getLatest: "git pull origin develop",
-	getStatus: "git status",
-};
-
-// executes a given 'git' command & returns the output of the command as a string
-const execGitCommand = (command) => {
-	return execSync(command)
-		.toString("utf8")
-		.replace(/[\n\r\s]+$/, "");
-};
-
 const getLatestForRepo = (repoDir) => {
 	// change directories
 	const dirPath = path.dirname(repoDir);
@@ -93,9 +83,9 @@ const getLatestForRepo = (repoDir) => {
 		(key) => repoDirs[key] === repoDir
 	)[0];
 
+	// if current directory does NOT match repo directory
 	if (!currentDir.includes(repoDir)) {
 		log(chalk.bgRedBright("Whoops! Directory not recognized:", currentDir));
-		// process.getMaxListeners(1);
 	} else {
 		log(chalk.bold.magentaBright(`${currentRepo} Repo...`));
 		log("Pulling latest for " + chalk.underline.greenBright(`${repoDir}`));
